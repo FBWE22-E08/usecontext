@@ -1,5 +1,7 @@
 import { useState, createContext } from "react";
 import "./App.css";
+import CounterOne from "./example2/CounterOne";
+import CounterProvider from "./example2/CounterProvider";
 import Header from "./Header";
 import Main from "./Main";
 
@@ -13,12 +15,16 @@ function App() {
   };
   // 2. PROVIDER
   return (
-    <CountContext.Provider value={{ count, handleIncrement }}>
-      <div>
-        <Header />
-        <Main />
-      </div>
-    </CountContext.Provider>
+    // <CountContext.Provider value={{ count, handleIncrement }}>
+    //   <div>
+    //     <Header />
+    //     <Main />
+    //   </div>
+    // </CountContext.Provider>
+    <CounterProvider>
+      <p>Welcome</p>
+      <CounterOne />
+    </CounterProvider>
   );
 }
 

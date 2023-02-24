@@ -1,11 +1,11 @@
 import Sidebar from "./Sidebar";
 import Content from "./Content";
 
-const Main = ({ count, handleIncrement }) => {
+const Main = () => {
   return (
     <div>
-      <Sidebar count={count} />
-      <Content count={count} handleIncrement={handleIncrement} />
+      <Sidebar />
+      <Content />
     </div>
   );
 };
